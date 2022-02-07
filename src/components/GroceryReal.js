@@ -1,18 +1,37 @@
 import  {Component} from 'react';
-class GroceryList extends Component {
+class GroceryReal extends Component {
+   
     render() { 
-        return(null);
-       // (const items= this.props.items.map((item,index) => <Item item={item} key={index} />);
-        // const notPurchased = <span> Items not purchased</span>;
+        // {// console.log(this.props.items) 
+        // // const items= this.props.items.map((item,index)=>{}}
+            console.log(this.props.items)
+            const notPurchased = <span> Items not purchased</span>;
+            let span
+            if (this.props.items.isPurchased === false) span= notPurchased
+            else   span = 'itemsisPurchased'
+          
+        return(
+            <div>
+            <div>{this.props.items.item}</div>
+            <div>{this.props.items.units}</div>
+            <div>{this.props.items.quantity}</div>
+            {span}
 
+             
+            
+            </div>
 
+       
+
+        
+        )
         // return(
         //     <div className="box">
         //         {}
 
         //     </div>
         
-        }
+        // }
     // constructor() {
     //     super()
     //     this.state = {
@@ -39,8 +58,8 @@ class GroceryList extends Component {
 
 
 //         }
-//     }
+    }
 
-}
+} 
 
-export default GroceryList;
+export default GroceryReal;
